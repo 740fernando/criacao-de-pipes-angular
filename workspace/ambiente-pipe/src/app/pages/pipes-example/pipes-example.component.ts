@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pipes-example.component.css']
 })
 export class PipesExampleComponent implements OnInit {
-
+  number= 0;
+  text = 'hello World!'
   constructor() { }
 
   ngOnInit(): void {
+  }
+  adicionaNumber(){
+    this.number++;
   }
 
 }

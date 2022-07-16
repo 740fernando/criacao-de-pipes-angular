@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
 
 const routes: Routes = [
-  {path:'pipes', component: PipesExampleComponent}
+  { path: 'pipes', component: PipesExampleComponent }
 ];
 
 @NgModule({

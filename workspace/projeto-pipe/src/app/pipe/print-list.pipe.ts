@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'printList'
+  name: 'printList',
+  pure:false
 })
 export class PrintListPipe implements PipeTransform {
 

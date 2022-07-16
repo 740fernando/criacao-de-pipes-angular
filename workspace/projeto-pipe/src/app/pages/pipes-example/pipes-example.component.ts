@@ -18,6 +18,8 @@ export class PipesExampleComponent implements OnInit {
     doadorSangue: false,
   }
 
+  nomes = ['Fernando', 'Lauren','Gabriel']
+
   constructor(private upperCasePipe: UpperCasePipe){}
  
   ngOnInit(): void {
@@ -31,4 +33,7 @@ export class PipesExampleComponent implements OnInit {
     this.number++;
   }
 
+  add(text:string){
+    this.nomes.push(text);
+  }
 }

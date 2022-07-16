@@ -39,3 +39,21 @@
 <h1 class="negrito" for="number" class="negrito">Diferentes tipos de pipes:</h1>
 <p class="negrito">{{text | lowercase}}</p>
 <button class="btn btn-success" (click)="mudaValorString()">Muda valor texto!!</button>
+
+<h1 class="display-1">Criando seu próprio pipe</h1>
+<div class="container">
+    <div class="col">
+        <div class="row-6">
+            <div class="form-group">
+                <label for="text" >Print Pipe Test : </label>
+                <input type="text" name="text" id="text" #txt>
+                <button class="btn btn-primary" (click)="add(txt.value)">add</button>
+            </div>
+        </div>
+        <div class="row-6">
+            <h3>Lista formatada</h3>
+            <p>Tamanaho da lina {{nomes.length}}</p>
+            <p>{{nomes | printList}}</p>
+        </div>
+    </div>
+</div>

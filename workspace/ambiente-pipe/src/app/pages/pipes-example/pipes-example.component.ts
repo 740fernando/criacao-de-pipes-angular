@@ -1,3 +1,4 @@
+import { UpperCasePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class PipesExampleComponent implements OnInit {
   number= 0;
   text = 'hello World!'
-  constructor() { }
+  constructor(private upperCasePipe: UpperCasePipe) { }
 
   ngOnInit(): void {
+    this.text= this.upperCasePipe.transform(this.text)
   }
   adicionaNumber(){
     this.number++;
+  }
+  mudaTexto(txt:string){
+    this.text=txt;
   }
 
 }

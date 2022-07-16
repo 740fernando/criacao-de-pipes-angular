@@ -13,8 +13,8 @@ export class PipesExampleComponent implements OnInit {
   text = 'hello world!';
   date = new Date;
   pessoa = {
-    nome: 'Ivonaldo',
-    idade: '26',
+    nome: 'Fernando',
+    idade: '30',
     profissao: 'Instrutor'
   };
   nomes = ['Ivonaldo', 'ana', 'maria'];

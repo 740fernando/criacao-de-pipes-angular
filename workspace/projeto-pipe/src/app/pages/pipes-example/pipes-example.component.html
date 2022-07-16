@@ -30,9 +30,13 @@
     <p class="negrito">Data de Hoje com  short pt</p>
     <p>{{date | date:'short':'pt' }}</p>
     <br>
-    <p class="negrito">Data de Hoje com dois pipes date | full</p>
-    <p>{{date | date:'full'}}</p>
+    <p class="negrito">Data de Hoje com dois pipes date | uppercase</p>
+    <p>{{date | date:'full' | uppercase}}</p>
     <br>
-    <p class="negrito">Hora date | shortTime</p>
+    <p class="negrito">Hora date shortTime</p>
     <p>{{date | date:'shortTime'}}</p> 
+
+    <p class="negrito"> PIPE JSON : {{pessoa | json}}</p>
+    <p class="negrito"> SLICE POSITIVE: {{pessoa.nome | slice:0:3  }}</p>
+    <p class="negrito"> SLICE NEGATIVE: {{pessoa.nome | slice:-5 }}</p>
 </div>

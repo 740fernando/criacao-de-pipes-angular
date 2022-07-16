@@ -12,6 +12,11 @@ export class PipesExampleComponent implements OnInit {
   number = 0;
   text = 'hello world!';
   date =new Date();
+  pessoa = {
+    nome:'Fernando',
+    idade:30,
+    doadorSangue: false,
+  }
 
   constructor(private upperCasePipe: UpperCasePipe){}
  

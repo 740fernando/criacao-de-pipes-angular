@@ -11,19 +11,10 @@ import { Component, OnInit } from '@angular/core';
 export class PipesExampleComponent implements OnInit {
   number = 0;
   text = 'hello world!';
-  date = new Date;
-  pessoa = {
-    nome: 'Fernando',
-    idade: '30',
-    profissao: 'Instrutor'
-  };
-  nomes = ['Ivonaldo', 'ana', 'maria'];
-  nomesPromisse: any;
-  nomes$: any;
+  date =new Date();
 
-  constructor(private upperCasePipe: UpperCasePipe) {
-  }
-
+  constructor(private upperCasePipe: UpperCasePipe){}
+ 
   ngOnInit(): void {
     this.text = this.upperCasePipe.transform(this.text)
   }
@@ -32,19 +23,4 @@ export class PipesExampleComponent implements OnInit {
     this.text = 'novo texto';
   }
 
-  add(text: string) {
-    this.nomes.push(text);
-  }
-
-  addToPromisse(text: string) {
-    this.nomes.push(text);
-    this.nomesPromisse = new Promise((resolve, reject) => {
-      setTimeout(() => resolve(this.nomes), 2000)
-    })
-  }
-
-  addToObservable(text: string) {
-    this.nomes.push(text);
-    this.nomes$ = interval(2000).pipe(map(valor => this.nomes));
-  }
 }

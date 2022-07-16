@@ -1,19 +1,29 @@
 <div class="form-group">
     <label for="number">Number:</label>
     <input type="text" name="number" [(ngModel)]="number" class="form-control" id="number">
+    <br>
 </div>
 
 <div class="">
     <p>sem formatacao: </p>
     <p>{{number | number}}</p>
-
+    <br>
     <p>Resultado com formatacao </p>
     <p>{{number | number:'2.0-1'}}</p>
- 
+    <br>
     <p>Resultado em porcetagem </p>
     <p>{{number | percent}}</p>
-
+    <br>
     <P>Resultado em moeda</P>
     <p>{{number | currency : 'BRL'}}</p>
     <p>{{text | lowercase}}</p>
+    <br>
+    <p>Data de Hoje formtada</p>
+    <p>{{date | date:'dd-MM-YYYY' }}</p>
+    <br>
+    <p>Data de Hoje com dois pipes date | full</p>
+    <p>{{date | date:'full'}}</p>
+    <br>
+    <p>Data de Hoje com dois pipes date | short</p>
+    <p>{{date | date:'short'}}</p>    
 </div>

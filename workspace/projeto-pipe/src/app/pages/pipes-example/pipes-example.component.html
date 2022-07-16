@@ -3,7 +3,7 @@
     <input type="text" name="number" [(ngModel)]="number" class="form-control" id="number">
     <br>
 </div>
-
+<button class="btn btn-success" (click)="mudaValorNumber()">Muda valor numero!!!</button>
 <div class="">
     <p class="negrito">sem formatacao: </p>
     <p>{{number | number }}</p>
@@ -16,10 +16,6 @@
     <br>
     <p class="negrito">Resultado em moeda</p>
     <p>{{number | currency : 'BRL'}}</p>
-    <br>
-    <br>
-    <p class="negrito">{{text | lowercase}}</p>
-    <br>
     <br>
     <p class="negrito">Data de Hoje</p>
     <p>{{date | date:'dd-MM-YYYY' }}</p>
@@ -40,3 +36,6 @@
     <p class="negrito"> SLICE POSITIVE: {{pessoa.nome | slice:0:3  }}</p>
     <p class="negrito"> SLICE NEGATIVE: {{pessoa.nome | slice:-5 }}</p>
 </div>
+<h1 class="negrito" for="number" class="negrito">Diferentes tipos de pipes:</h1>
+<p class="negrito">{{text | lowercase}}</p>
+<button class="btn btn-success" (click)="mudaValorString()">Muda valor texto!!</button>

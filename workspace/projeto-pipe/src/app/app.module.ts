@@ -14,6 +14,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrintListPipe } from './pipe/print-list.pipe';
 
 
 
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HeaderComponent,
-    PipesExampleComponent
+    PipesExampleComponent,
+    PrintListPipe
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [UpperCasePipe],
+  providers: [UpperCasePipe,PrintListPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
